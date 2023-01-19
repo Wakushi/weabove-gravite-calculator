@@ -252,6 +252,38 @@ main {
   font-size: 25px;
 }
 
+/* --- WALLET DETAILS --- */
+
+.prime-nfts{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 5rem auto;
+  padding: 5em;
+  width: 70%;
+  background: #191919;
+  border-radius: 20px;
+}
+
+.ordo-nfts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5rem auto;
+  padding: 5em;
+  width: 70%;
+  background: #191919;
+  border-radius: 20px;
+
+}
+
+
+
+
+/* --- MEDIA QUERIES --- */
+
 @media screen and (max-width: 1170px) {
   
   .collections {

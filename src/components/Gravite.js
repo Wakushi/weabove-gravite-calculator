@@ -50,7 +50,7 @@ export default function Gravite (props) {
                     <img className="ordos-img" src={ordos} alt="ordos collection" width="300px"></img>
                     <h3>You hold <em>{ordosNFT}</em> Ordos Database</h3>
                     <div className="ordos-sum">
-                        <h4><em>{primeSum} $GRV</em></h4>
+                        <h4><em>{ordosSum} $GRV</em></h4>
                         <img className="gravite-icon" src={gravite} alt="gravite"></img> 
                     </div>
                 </div>

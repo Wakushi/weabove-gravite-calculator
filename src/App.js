@@ -2,6 +2,7 @@ import React from "react";
 import Gravite from "./components/Gravite";
 import Header from "./components/Header"
 import Wallet from "./components/Wallet"
+import Nft from "./components/Nft"
 
 export default function App() {
 
@@ -46,6 +47,54 @@ export default function App() {
   }
 
 
+ // Iterates over the data from the API to gather and centralize the informations we need
+ // in an array.
+  const nftOrdosArray = []
+  for (const [key, value] of Object.entries(userData.ordos.details)) {
+    nftOrdosArray.push(
+      {
+        nftId:key,
+        img:value.img,
+        reward:value.rewards
+      }
+      )
+  }
+
+  // We can .map over this array to create our NFT components.
+  const ordosElements = nftOrdosArray.map((nft) => {
+    return (
+      <Nft
+        key={nft.nftId}
+        id={nft.nftId}
+        img={nft.img}
+        reward={nft.reward}
+      />
+    )
+  })
+
+  const nftPrimeArray = []
+  for (const [key, value] of Object.entries(userData.prime.details)) {
+    nftPrimeArray.push(
+      {
+        nftId:key,
+        img:value.img,
+        reward:value.rewards
+      }
+      )
+  }
+
+  const primeElements = nftPrimeArray.map((nft) => {
+    return (
+      <Nft
+        key={nft.nftId}
+        id={nft.nftId}
+        img={nft.img}
+        reward={nft.reward}
+      />
+    )
+  })
+
+
 
   return (
     <>
@@ -57,7 +106,12 @@ export default function App() {
         userKey={userKey}
         handleFetch={fetchData}
       />
-
+      <div className="ordo-nfts">
+        {ordosElements}
+      </div>
+      <div className="prime-nfts">
+        {primeElements}
+      </div>
     </>
   )
 }
