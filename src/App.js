@@ -27,9 +27,8 @@ export default function App() {
   }
 
   React.useEffect(()=>{
-    if (userKey >= 41){
+    if (userKey >= 42){
       fetchData()
-      console.log("correct key")
     }
   },[userKey])
 
