@@ -20,24 +20,14 @@ export default function App() {
 
 
 // fetchData : gets data from Hando's API and stores it to userData. 
-  // function fetchData() {
-  //   fetch(`https://api.handosensei.com/weabove/estimate-staking/${userKey}`)
-  //   .then(res => res.json())
-  //   .then(data => setUserData(data))
-  // }
+   function fetchData() {
+     fetch(`https://api.handosensei.com/weabove/estimate-staking/${userKey}`)
+     .then(res => res.json())
+     .then(data => setUserData(data))
+   }
 
-  // method from https://medium.com/@robertreinhart24/cors-error-solved-a5501b85262 
 
-  function fetchData() {
-    fetch(`https://proxy-vercel-gravite-app.vercel.app/`, {
-      method: 'POST',
-      body : {
-        'my-url':`https://api.handosensei.com/weabove/estimate-staking/${userKey}`
-      }
-    })
-    .then(res => res.json())
-    .then(data => setUserData(data))
-  }
+
 
 // Checks when the full user key has been entered to fetch data only when key is complete
   React.useEffect(()=>{
