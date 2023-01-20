@@ -256,7 +256,7 @@ main {
   align-items: center;
   margin: 5rem auto;
   padding: 5em;
-  width: 70%;
+  width: 90%;
   background: #1919192f;
   border-radius: 20px;
   position: relative;
@@ -277,7 +277,7 @@ main {
   flex-wrap: wrap;
   margin: 5rem auto;
   padding: 5em;
-  width: 70%;
+  width: 90%;
   background: #1919192f;
   border-radius: 20px;
   position: relative;
@@ -292,7 +292,7 @@ main {
 
 .nft {
   background: #ffffff42;
-  width: 25%;
+  width: 18%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -329,7 +329,27 @@ main {
   border-radius: 20px;
 }
 
+/* ---- Footer ---- */
 
+footer {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(17, 17, 17, 0.644);
+  padding: 10px;
+  width: 20%;
+  border-radius: 20px;
+  margin-bottom: 1em;
+}
+
+footer h5 {
+  text-align: center;
+  font-family: Biotif ;
+  font-size: 15px;
+  font-weight: 500;
+}
 
 
 /* --- MEDIA QUERIES --- */
@@ -516,6 +536,10 @@ main {
     margin: 5px 0 0px 6px;
   }
 
+  footer h5 {
+    font-size: 13px;
+  }
+
 }
 
 
@@ -532,6 +556,10 @@ main {
   .grav-logo {
     width: 30px;
   }
+
+  footer h5 {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width:547px) {
@@ -546,7 +574,10 @@ main {
   .main-logo {
     width: 80px;
   }
-  
+
+  footer h5 {
+    font-size: 9px;
+  }
 }
 
 @media screen and (max-width:450px) {
@@ -554,7 +585,7 @@ main {
 
   header h1 {
     font-size: 20px;
-    margin-right: 1em;
+    margin-right: 1.8em;
   }
 
   .main-logo {
@@ -640,12 +671,19 @@ main {
     font-size: 12px;
   }
 
+  footer h5 {
+    font-size: 7px;  
+  }
 
 }
 
 @media screen and (max-width:355px){
   header h1 {
     font-size: 16px;
+  }
+
+  footer h5 {
+    font-size: 5px;  
   }
 }
 

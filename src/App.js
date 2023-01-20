@@ -2,6 +2,7 @@ import React from "react";
 import Gravite from "./components/Gravite";
 import Header from "./components/Header"
 import Nft from "./components/Nft"
+import Footer from "./components/Footer"
 
 export default function App() {
 
@@ -23,9 +24,9 @@ export default function App() {
     fetch(`https://api.handosensei.com/weabove/estimate-staking/${userKey}`)
     .then(res => res.json())
     .then(data => setUserData(data))
-    console.log("fetched")
   }
 
+// Checks when the full user key has been entered to fetch data only when key is complete
   React.useEffect(()=>{
     if (userKey >= 42){
       fetchData()
@@ -71,6 +72,8 @@ export default function App() {
     )
   })
 
+ // Iterates over the data from the API to gather and centralize the informations we need
+ // in an array.
   const nftPrimeArray = []
   for (const [key, value] of Object.entries(userData.prime.details)) {
     nftPrimeArray.push(
@@ -82,6 +85,7 @@ export default function App() {
       )
   }
 
+  // We can .map over this array to create our NFT components.
   const primeElements = nftPrimeArray.map((nft) => {
     return (
       <Nft
@@ -105,14 +109,16 @@ export default function App() {
         userKey={userKey}
         handleFetch={fetchData}
       />
-      {ordosElements.length > 0 && <div className="prime-nfts">
+      {/* displays collection component only is data is fetched and userData != empty. */}
+      {ordosElements.length > 0 && <div className="prime-nfts"> 
         <h2>Prime Collection</h2>
         {primeElements}
       </div>}
-      {ordosElements.length > 0 && <div className="ordo-nfts">
+      {ordosElements.length > 0 && <div className="ordo-nfts"> 
         <h2>Ordos Database Collection</h2>
         {ordosElements}
       </div>}
+      <Footer />
       
     </>
   )
