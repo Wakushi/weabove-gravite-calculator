@@ -21,7 +21,10 @@ export default function App() {
 
 // fetchData : gets data from Hando's API and stores it to userData. 
   function fetchData() {
-    fetch(`https://api.handosensei.com/weabove/estimate-staking/${userKey}`)
+    fetch(`https://api.handosensei.com/weabove/estimate-staking/${userKey}`,{
+      method: 'GET',
+      mode: 'cors',
+   })
     .then(res => res.json())
     .then(data => setUserData(data))
   }
