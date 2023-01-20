@@ -20,32 +20,24 @@ export default function App() {
 
 
 // fetchData : gets data from Hando's API and stores it to userData. 
+  // function fetchData() {
+  //   fetch(`https://api.handosensei.com/weabove/estimate-staking/${userKey}`)
+  //   .then(res => res.json())
+  //   .then(data => setUserData(data))
+  // }
+
+  // method from https://medium.com/@robertreinhart24/cors-error-solved-a5501b85262 
+
   function fetchData() {
-    fetch(`https://api.handosensei.com/weabove/estimate-staking/${userKey}`)
+    fetch(`https://proxy-vercel-gravite-app.vercel.app/`, {
+      method: 'POST',
+      body : {
+        'my-url':`https://api.handosensei.com/weabove/estimate-staking/${userKey}`
+      }
+    })
     .then(res => res.json())
     .then(data => setUserData(data))
   }
-
-
-// const axios = require('axios');
-
-//   async function getURI(url) {
-//     try {
-//       const response = await axios.get(url);
-//       console.log(response)
-//       if (response.status !== 200) {
-//         return res.status(response.status).json({ type: 'error', message: response.statusText });
-//       } else {
-//       res.json(response.data);
-//       }
-//     } catch (error) {
-//       console.log(error)
-//       return res.status(500).json({ type: 'error', message: error.message });
-//     }
-//   }
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   getURI(req.body['my-url']);
-
 
 // Checks when the full user key has been entered to fetch data only when key is complete
   React.useEffect(()=>{
