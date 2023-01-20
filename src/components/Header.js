@@ -1,6 +1,6 @@
 import React from "react";
 import weabove from "../assets/weabove.png"
-import gravite from "../assets/gravite.png"
+import gravite from "../assets/opensea.png"
 
 export default function Header() {
     return(
@@ -10,7 +10,7 @@ export default function Header() {
 
                 <h1>GRAVITE <em>CALCULATOR</em></h1>
                 
-                <img className="grav-logo" src={gravite} alt="gravite" width="40px"></img>
+                <a target="_blank" href="https://opensea.io/collection/weabove-prime"><img className="os-logo" src={gravite} alt="opensea" width="80px"></img></a>
           
         </header>
     )
