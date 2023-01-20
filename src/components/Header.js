@@ -5,14 +5,11 @@ import gravite from "../assets/gravite.png"
 export default function Header() {
     return(
         <header>
-            <img className="main-logo" src={weabove} width="50px"></img>
-            <div className="header-title">
-                <img className="gravite" src={gravite}></img>
-                    <h1>GRAVITE CALCULATOR</h1>
-                <img className="gravite" src={gravite}></img>
-            </div>
             
-            <p>This web app calculates how much gravite ($GRV) you will earn in the WeAbove staking program, by entering your wallet public key.</p>
+                <a target='_blank' href="https://weabove.io/"><img className="main-logo" src={weabove} width="200px"></img></a>
+                <h1>GRAVITE <em>CALCULATOR</em></h1>
+                <img className="grav-logo" src={gravite} alt="gravite" width="40px"></img>
+          
         </header>
     )
 }

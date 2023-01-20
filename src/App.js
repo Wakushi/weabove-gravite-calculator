@@ -1,7 +1,6 @@
 import React from "react";
 import Gravite from "./components/Gravite";
 import Header from "./components/Header"
-import Wallet from "./components/Wallet"
 import Nft from "./components/Nft"
 
 export default function App() {
@@ -106,12 +105,15 @@ export default function App() {
         userKey={userKey}
         handleFetch={fetchData}
       />
-      <div className="ordo-nfts">
-        {ordosElements}
-      </div>
-      <div className="prime-nfts">
+      {ordosElements.length > 0 && <div className="prime-nfts">
+        <h2>Prime Collection</h2>
         {primeElements}
-      </div>
+      </div>}
+      {ordosElements.length > 0 && <div className="ordo-nfts">
+        <h2>Ordos Database Collection</h2>
+        {ordosElements}
+      </div>}
+      
     </>
   )
 }

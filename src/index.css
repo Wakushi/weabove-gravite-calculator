@@ -16,13 +16,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Oswald", sans-serif; 
+}
+
+h1, h2, h3, h4 {
+  text-shadow: 2px 2px 8px black;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Biotif', sans-serif;
-  background-color: #111;
+  background: url('./assets/alt-body-bg.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #fff;
 }
 
@@ -39,46 +48,24 @@ em {
 /* ---- Header ---- */ 
 
 header {
+  width: 100%;
+  padding: 20px;
+  background: rgba(17, 17, 17, 0.219);
+  margin-bottom: 4em;
+  margin: auto;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4em;
-}
-
-.header-title {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   text-align: center;
 }
 
+
 header h1 {
-  font-size: 40px;
-  margin-bottom: 1em;
+  font-size: 45px;
+  color:  #fff;
   font-weight: 700;
-}
-
-.main-logo {
-  width: 20%;
-  margin-bottom: 4em;
-}
-
-header p {
-  width: 50%;
-  text-align: center;
-  font-size: 20px;
-  box-shadow: inset 5px 5px 30px 3px rgba(0, 0, 0, 0.7);
-  padding: 20px 20px;
-  border-radius: 20px 20px;
-}
-
-.gravite {
-  width: 1.5%;
-  margin: 2em;
-  position: relative;
-  bottom: 20px ;
+  margin-right: 3.5em;
 }
 
 
@@ -89,36 +76,31 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin: 5rem auto;
-  padding: 5em;
+  margin: 2rem auto;
+  padding: 2em ;
   width: 70%;
-  background: #191919;
+  background: #1919192f;
+  box-shadow: inset 5px 5px 30px 3px rgba(0, 0, 0, 0.7);
   border-radius: 20px;
   position: relative;
 }
 
 /* ---- INPUT BOX ---- */
 
-.input-box {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
-}
 
 .user-input {
   z-index: 1;
   height: 50px;
-  width: 100%;
-  font-family:sans-serif;
-  border: 2px rgb(39, 39, 39) solid;
+  width: 40%;
+  font-family:Oswald;
+  border: 3px #fe496d59 solid;
   border-radius: 40px;
-  padding: 0px 50px;
+  padding: 0px 20px;
   font-size: 20px;
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.5);
   color: white;
   font-weight: 200;
+  margin-bottom: 1em;
 }
 
 .input-box ion-icon {
@@ -137,18 +119,20 @@ main {
 /* ---- GRAVITE SUM ---- */
 
 .total-gravite {
-  font-size: 40px;
-  padding: 20px 40px;
-  margin-bottom: 4rem;
+  font-size: 35px;
+  padding: 20px;
   border-radius: 20px;
+  width: 30%;
   text-align: center;
-  box-shadow: inset 5px 5px 30px 3px rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.116);
+  box-shadow: 5px 5px 30px 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 20px black;
 }
 
 /* ---- COLLECTIONS --- */
 
 .gravite-icon {
-  width: 30%;
+  width: 15%;
   margin: 10px;
 }
 
@@ -167,6 +151,8 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5em;
+  width: 30%;
 }
 
 .prime-img {
@@ -175,6 +161,8 @@ main {
   box-shadow: 10px 10px 40px black;
   opacity: 1;
   z-index: 2;
+  overflow: hidden;
+  width: 100%;
 }
 
 .prime-img:hover {
@@ -184,6 +172,7 @@ main {
 .prime-collection h2 {
   margin: 1em;
   font-size: 28x;
+  text-align: center;
 }
 
 .prime-collection h3 {
@@ -191,6 +180,7 @@ main {
   top: 130px;
   margin: 1em;
   font-size: 25px;
+  text-align: center;
 }
 
 .prime-sum {
@@ -198,11 +188,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  top: 180px;
+  top: 200px;
   margin: 1em;
   font-size: 25px;
 }
+
+
 
 
 /* ---- ORDOS COLLECTION --- */
@@ -213,6 +204,8 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5em;
+  width: 30%;
 }
 
 .ordos-img {
@@ -221,6 +214,8 @@ main {
   box-shadow: 10px 10px 40px black;
   opacity: 1;
   z-index: 2;
+  overflow: hidden;
+  width: 100%;
 }
 
 .ordos-img:hover {
@@ -246,37 +241,92 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  top: 210px;
+  top: 220px;
   margin: 1em;
   font-size: 25px;
 }
+
 
 /* --- WALLET DETAILS --- */
 
 .prime-nfts{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   margin: 5rem auto;
   padding: 5em;
   width: 70%;
-  background: #191919;
+  background: #1919192f;
   border-radius: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.prime-nfts h2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 28px;
 }
 
 .ordo-nfts{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   margin: 5rem auto;
   padding: 5em;
   width: 70%;
-  background: #191919;
+  background: #1919192f;
   border-radius: 20px;
+  position: relative;
+}
 
+.ordo-nfts h2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 28px;
+}
+
+.nft {
+  background: #ffffff42;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 1em;
+  border-radius: 20px;
+  transition: 1s;
+  box-shadow: 5px 5px 30px 3px rgba(0, 0, 0, 0.7);
+}
+
+.nft:hover {
+  transform: translateY(-2%);
+}
+
+.nft h3 {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  margin-top: 6px;
+  box-shadow: inset 5px 5px 30px 3px rgba(0, 0, 0, 0.534);
+  border-radius: 10px;
+  padding: 3px 3px;
+  text-align: center;
+}
+
+.nft h4 {
+  color: #111;
+  font-size: 18px;
+  font-family: Biotif;
+  text-shadow: 1px 1px 5px black ;
+}
+
+.nft img {
+  border-radius: 20px;
 }
 
 
@@ -284,27 +334,328 @@ main {
 
 /* --- MEDIA QUERIES --- */
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
+
+  header h1 {
+    font-size: 35px;
+  }
+
+  .user-input {
+    width: 70%;
+  }
+
+  .total-gravite h2 {
+    font-size: 30px;
+  }
+  .total-gravite h3 {
+    font-size: 30px;
+  }
+  .total-gravite h5 {
+    font-size: 25px;
+  }
+
+  .gravite-icon {
+    display: none;
+  }
   
+  .ordos-collection h3 {
+    font-size: 20px;
+  } 
+  
+  .ordos-sum h4 {
+    font-size: 20px;
+  }
+
+  .prime-collection h3 {
+    font-size: 20px;
+  }
+  
+  .prime-sum h4 {
+    font-size: 20px;
+  }
+
+  .nft {
+    width: 30%;
+    margin: 5px;
+  }
+
+}
+
+@media screen and (max-width: 965px) {
+
+  .total-gravite h2 {
+    font-size: 25px;
+  }
+  .total-gravite h3 {
+    font-size: 25px;
+  }
+  .total-gravite h5 {
+    font-size: 20px;
+  }
+
+  .ordos-collection h3 {
+    font-size: 18px;
+    margin-top: 2.5em;
+  } 
+  
+  .ordos-sum h4 {
+    font-size: 18px;
+  }
+
+  .prime-collection h3 {
+    font-size: 18px;
+    margin-top: 3em;
+  }
+  
+  .prime-sum h4 {
+    font-size: 18px;
+  }
+
+  .prime-nfts h2 {
+    font-size: 20px;
+  }
+
+  .ordo-nfts h2 {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width:900px) {
+
+  .prime-collection h3 {
+    font-size: 18px;
+    margin-top: 2em;
+  }
+
+}
+
+
+@media screen and (max-width:855px) {
+
+  
+  header h1 {
+    font-size: 35px;
+    margin-right: 1em;
+  }
+
+  .main-logo {
+    width:100px;
+  }
+
   .collections {
     flex-direction: column;
   }
 
-  .input-box {
-    width: 70%;
+  .prime-collection {
+    width: 60%;
+  }
+
+  .ordos-collection {
+    width: 60%;
+  }
+
+  .prime-collection h3 {
+    font-size: 25px;
+  }
+
+  .prime-sum {
+    top: 230px;
+  }
+
+  .prime-sum h4 {
+    font-size: 20px;
+  }
+
+  .ordos-collection h3 {
+    font-size: 25px;
+    top: 90px;
+  }
+
+  .ordos-sum {
+    top: 250px;
+  }
+
+  .ordos-sum h4 {
+    font-size: 20px;
+  }
+
+  .total-gravite {
+    width: 50%;
+    margin-bottom: 1em;
+  }
+
+  main {
+    width: 95% ;
+  }
+
+  .ordo-nfts {
+    width: 95% ;
+  }
+
+  .prime-nfts {
+    width: 95% ;
+  }
+
+  .nft {
+    padding: 8px;
+  }
+
+  .nft-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nft h3 {
+    font-size: 14px;
+  }
+
+  .nft h4 {
+    font-size: 14px;
+    margin: 5px 0 0px 6px;
   }
 
 }
 
-@media screen and (max-width:700px) {
 
-  .input-box {
+@media screen and (max-width:700px) {
+  .nft {
+    width: 47%;
+  }
+
+  header h1 {
+    font-size: 30px;
+    margin-right: 2em;
+  }
+
+  .grav-logo {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width:547px) {
+  .nft {
+    width: 42%;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  .main-logo {
+    width: 80px;
+  }
+  
+}
+
+@media screen and (max-width:450px) {
+
+
+  header h1 {
+    font-size: 20px;
+    margin-right: 1em;
+  }
+
+  .main-logo {
+    width: 60px;
+  }
+  .grav-logo {
+    width: 20px;
+  }
+
+  .user-input {
+    width: 90%;
+  }
+
+
+  .total-gravite {
+    margin: 0;
+    width: 80%;
+ }
+
+  .prime-collection {
+    margin: 2em;
     width: 100%;
   }
 
-  .header h1 {
-    font-size: 10px;
+  .ordos-collection {
+    width: 100%;
+  }
+
+  .prime-collection h2 {
+    font-size: 20px;
+  }
+
+  .prime-collection h3 {
+    margin: 0 1em 0 1em;
+    font-size: 25px;
+  }
+
+  .prime-sum {
+    top: 180px;
+  }
+
+  .prime-sum h4 {
+    font-size: 25px;
+  }
+
+  .ordos-collection h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .ordos-collection h3 {
+    margin: 1em;
+    font-size: 19px;
+  }
+
+  .ordos-sum {
+    top: 165px;
+  }
+
+  .ordos-sum h4 {
+    font-size: 18px;
+  }
+
+  .nft {
+    width: 30%;
+  }
+
+  .prime-nfts {
+    width: 93%;
+    padding: 70px 0 20px 0 ;
+  }
+
+  .ordo-nfts {
+    width: 93%;
+    padding: 70px 0 20px 0 ;
+  }
+
+  .nft-stats h3 {
+    font-size: 12px;
+  }
+
+  .nft-stats h4 {
+    font-size: 12px;
   }
 
 
 }
+
+@media screen and (max-width:355px){
+  header h1 {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width:325px) {
+
+  .nft {
+    width: 46%;
+  }
+
+}
+
+

@@ -8,10 +8,12 @@ export default function Nft(props) {
     console.log(httpImg)
 
     return(
-        <div>
-            <img src={httpImg} width='200px'></img>
-            <h3>{props.id}</h3>
-            <h4>Reward : {props.reward}</h4>
+        <div className="nft">
+            <img src={httpImg} width='100%'></img>
+            <div className="nft-stats">
+                <h3>#{props.id}</h3>
+                <h4><em>{props.reward} $GRV</em></h4>
+            </div>
         </div>
     )
 }
