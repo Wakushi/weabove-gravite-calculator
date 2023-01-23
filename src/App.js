@@ -113,7 +113,7 @@ export default function App() {
         handleFetch={fetchData}
       />
       {/* displays collection component only is data is fetched and userData != empty. */}
-      {ordosElements.length > 0 && <div className="prime-nfts"> 
+      {primeElements.length > 0 && <div className="prime-nfts"> 
         <h2>Prime Collection</h2>
         {primeElements}
       </div>}
