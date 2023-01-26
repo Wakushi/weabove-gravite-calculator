@@ -73,6 +73,11 @@ header h1 {
   filter: invert(1);
 }
 
+.header-title {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* ---- Main ---- */
 
