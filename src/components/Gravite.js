@@ -2,6 +2,7 @@ import React from "react"
 import prime from "../assets/prime.gif"
 import ordos from "../assets/ordos.png"
 import gravite from "../assets/gravite.png"
+import box from "../assets/gold.png"
 
 export default function Gravite (props) {
 
@@ -15,13 +16,22 @@ export default function Gravite (props) {
     return (
         <main>
 
-            <input className="user-input"
-                    type="text"
-                    value={props.userKey}
-                    placeholder="0x000..."
-                    onChange={props.handleChange}
-                    onPaste={props.handlePaste}
-                />
+            <img 
+                onClick={props.toggleModal} 
+                className="opening-modal-icon shadow" 
+                width="100px" 
+                src={box} 
+                alt="modal opening"
+            ></img>
+
+            <input 
+                className="user-input"
+                type="text"
+                value={props.userKey}
+                placeholder="0x000..."
+                onChange={props.handleChange}
+                onPaste={props.handlePaste}
+            />
 
            
 

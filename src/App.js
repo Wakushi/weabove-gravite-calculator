@@ -3,6 +3,7 @@ import Gravite from "./components/Gravite";
 import Header from "./components/Header"
 import Nft from "./components/Nft"
 import Footer from "./components/Footer"
+import BoxModal from "./components/BoxModal";
 
 export default function App() {
 
@@ -100,17 +101,27 @@ export default function App() {
     )
   })
 
+  function toggleModal() {
+    if((document.getElementById('modal').style.getPropertyValue('display')) == "flex"){
+      document.getElementById('modal').style.display = "none"
+    } else {
+      document.getElementById('modal').style.display = "flex"
+    }
+  }
+
 
 
   return (
     <>
-      <Header />
+      <BoxModal userData={userData} toggleModal={toggleModal} />
+      <Header/>
       <Gravite 
         handleChange={handleChange}
         handlePaste={handlePaste}
         userData={userData}
         userKey={userKey}
         handleFetch={fetchData}
+        toggleModal={toggleModal}
       />
       {/* displays collection component only is data is fetched and userData != empty. */}
       {primeElements.length > 0 && <div className="prime-nfts"> 
