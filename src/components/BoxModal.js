@@ -207,9 +207,9 @@ export default function BoxModal(props) {
                     </span>
                     <hr></hr>
                     <span className="box-results">
-                        <p>Bronze <em>Box</em> : every ~{daysToBronze} days</p>
-                        <p>Silver <em>Box</em> : every ~{daysToSilver} days</p>
-                        <p>Gold <em>Box</em> : every ~{daysToGold} days</p>
+                        <p>Bronze <em>Box</em> : {daysToBronze} days</p>
+                        <p>Silver <em>Box</em> : {daysToSilver} days</p>
+                        <p>Gold <em>Box</em> : {daysToGold} days</p>
                         <p className="small-text">(Based on daily earnings only)</p>
                     </span>
                    

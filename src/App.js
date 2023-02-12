@@ -28,8 +28,6 @@ export default function App() {
    }
 
 
-
-
 // Checks when the full user key has been entered to fetch data only when key is complete
   React.useEffect(()=>{
     if (userKey >= 42){
