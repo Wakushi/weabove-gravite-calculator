@@ -89,8 +89,8 @@ header h1 {
 }
 
 .opening-modal-icon:hover {
-  -webkit-filter: drop-shadow(2px 2px 20px #4b4a4a);
-        filter: drop-shadow(2px 2px 20px #4b4a4a);
+  -webkit-filter: drop-shadow(2px 2px 20px #fa0000);
+        filter: drop-shadow(2px 2px 20px #be0000);
 }
 
 
@@ -332,6 +332,15 @@ main {
   display: none;
 }
 
+/* INFO MESSAGE  */
+
+.info-text {
+  font-size: 7vw;
+  text-align: center;
+  text-shadow: 1px 1px 10px #111;
+  line-height: 1;
+  margin-bottom: 0.2em;
+}
 
 /* ---- COLLECTIONS --- */
 
@@ -1008,7 +1017,7 @@ footer h5 {
   }
 
   .opening-modal-icon {
-    top: 71px;
+    top: 200px;
   }
 
   .user-input {
@@ -1021,6 +1030,14 @@ footer h5 {
 
   .nft {
     width: 46%;
+  }
+
+}
+
+@media screen and (min-width:725px) {
+
+  .info-text {
+    font-size: 2.5vw;
   }
 
 }

@@ -3,6 +3,7 @@ import prime from "../assets/prime.gif"
 import ordos from "../assets/ordos.png"
 import gravite from "../assets/gravite.png"
 import box from "../assets/gold.png"
+import noBox from "../assets/no-box.png"
 
 export default function Gravite (props) {
 
@@ -20,9 +21,12 @@ export default function Gravite (props) {
                 onClick={props.toggleModal} 
                 className="opening-modal-icon shadow" 
                 width="100px" 
-                src={box} 
+                src={noBox} 
                 alt="modal opening"
             ></img>
+
+            <p className="info-text">App is currently under <em>maintenance</em></p>
+            <p className="info-text">Check #main-hall on the <a href="https://discord.gg/weabove" target="_blank"><em>official discord</em></a> for status update</p>
 
             <input 
                 className="user-input"
