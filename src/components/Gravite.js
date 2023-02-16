@@ -21,12 +21,9 @@ export default function Gravite (props) {
                 onClick={props.toggleModal} 
                 className="opening-modal-icon shadow" 
                 width="100px" 
-                src={noBox} 
+                src={box} 
                 alt="modal opening"
             ></img>
-
-            <p className="info-text">App is currently under <em>maintenance</em></p>
-            <p className="info-text">Check #main-hall on the <a href="https://discord.gg/weabove" target="_blank"><em>official discord</em></a> for status update</p>
 
             <input 
                 className="user-input"

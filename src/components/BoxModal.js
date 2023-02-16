@@ -126,6 +126,9 @@ export default function BoxModal(props) {
 
         <div id="modal">
             <div className="box-modal">
+                {/* <div className="rules-modal">
+                    
+                </div> */}
                 <i onClick={props.toggleModal} className="fa-regular fa-circle-xmark"></i>
                 <h2>Gravite <em>Simulator</em></h2>
                 <div className="simulator-options">

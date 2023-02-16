@@ -89,8 +89,8 @@ header h1 {
 }
 
 .opening-modal-icon:hover {
-  -webkit-filter: drop-shadow(2px 2px 20px #fa0000);
-        filter: drop-shadow(2px 2px 20px #be0000);
+  -webkit-filter: drop-shadow(2px 2px 40px #ffffff);
+        filter: drop-shadow(2px 2px 40px #ffffff);
 }
 
 
@@ -213,6 +213,20 @@ main {
 
 .basic-options h4 {
   margin-top: 1em;
+}
+
+/* RULES */
+
+.rules-modal {
+  position: absolute;
+  z-index: 999;
+  width: 70%;
+  height: 20%;
+  left: 14%;
+  top: 10%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px #000000;
+  background-color: #0e0b0b;
 }
 
 /* BASIC OPTIONS LORE */
