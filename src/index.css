@@ -220,14 +220,27 @@ main {
 .rules-modal {
   position: absolute;
   z-index: 999;
-  width: 70%;
-  height: 20%;
-  left: 14%;
-  top: 10%;
-  border-radius: 5px;
-  box-shadow: 1px 1px 15px #000000;
-  background-color: #0e0b0b;
+  max-width: 220px;
+  right: 6vw;
+  top: 12%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px #0e0e0e;
+  background-color: #0e0b0bec;
+  padding: 15px;
 }
+
+.rules-modal p:nth-child(1) {
+  text-decoration: underline #FE496E;
+}
+
+.fa-book {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
 
 /* BASIC OPTIONS LORE */
 
@@ -369,6 +382,11 @@ main {
   justify-content: space-around;
   align-items: center;
   height: 380px;
+}
+
+.ordos-img,
+.prime-img {
+  max-width: 370px;
 }
 
 /* ---- PRIME COLLECTION --- */
@@ -830,6 +848,9 @@ footer h5 {
     display: none;
   }
 
+  .rules-modal {
+    right: 15vw;
+  }
 }
 
 @media screen and (max-width:547px) {
@@ -1019,6 +1040,10 @@ footer h5 {
     width: 60px;
   }
 
+  .rules-modal {
+    top: 8%;
+  }
+
 }
 
 @media screen and (max-width:355px){
@@ -1031,7 +1056,7 @@ footer h5 {
   }
 
   .opening-modal-icon {
-    top: 200px;
+    top: 70px;
   }
 
   .user-input {
@@ -1046,12 +1071,30 @@ footer h5 {
     width: 46%;
   }
 
+  .box-modal h2 {
+    font-size: 1rem;
+  }
+
 }
 
 @media screen and (min-width:725px) {
 
   .info-text {
     font-size: 2.5vw;
+  }
+
+}
+
+@media screen and (min-width:549px) {
+
+  .fa-book {
+    font-size: 25px;
+    right: 80px;
+    top: 35px;
+  }
+
+  .rules-modal {
+    top: 70px;
   }
 
 }
@@ -1126,6 +1169,8 @@ footer h5 {
 	}
 }
 
+/* Glow animation */
+
 @keyframes glow {
   0% {
 		-webkit-filter: drop-shadow(1px 1px 5px #FE496E);
@@ -1140,6 +1185,45 @@ footer h5 {
     filter: drop-shadow(1px 1px 5px #FE496E);
 	}
 }
+
+/* Scale animation */
+
+.scale-up-tr {
+	-webkit-animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes scale-up-tr {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+}
+@keyframes scale-up-tr {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+  }
+}
+
+
+
 
 .zouzie {
   pointer-events: none;

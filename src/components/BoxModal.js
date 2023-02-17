@@ -122,13 +122,37 @@ export default function BoxModal(props) {
         
     } 
 
+    function showRules() {
+        if(document.getElementById('rules')){
+            document.getElementById('rules').classList.remove('hidden')
+            document.getElementById('book-icon').style.color = "#FE496E"
+        }
+    }
+
+    function hideRules() {
+        if(document.getElementById('rules')){
+            document.getElementById('rules').classList.add('hidden')
+            document.getElementById('book-icon').style.color = "#fff"
+        }
+    }
+
     return (
 
         <div id="modal">
             <div className="box-modal">
-                {/* <div className="rules-modal">
-                    
-                </div> */}
+                <div id="rules" className="rules-modal hidden scale-up-tr">
+                    <p><em>Rules</em></p> 
+                    <p><em>200</em> $GRV / day / wallet <em>max</em></p> 
+                    <p><em>1</em> box / week / wallet <em>max</em></p>
+                    <p><em>One</em> special key unlocks the upper box</p>
+
+                </div>
+                <i 
+                    onMouseOver={showRules} 
+                    onMouseLeave={hideRules}
+                    className="fa-solid fa-book"
+                    id="book-icon"
+                ></i>
                 <i onClick={props.toggleModal} className="fa-regular fa-circle-xmark"></i>
                 <h2>Gravite <em>Simulator</em></h2>
                 <div className="simulator-options">

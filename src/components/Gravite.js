@@ -3,7 +3,7 @@ import prime from "../assets/prime.gif"
 import ordos from "../assets/ordos.png"
 import gravite from "../assets/gravite.png"
 import box from "../assets/gold.png"
-import noBox from "../assets/no-box.png"
+
 
 export default function Gravite (props) {
 
