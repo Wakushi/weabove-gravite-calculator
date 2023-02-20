@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Nft from "./components/Nft"
 import Footer from "./components/Footer"
 import BoxModal from "./components/BoxModal";
+import LoreNft from "./components/LoreNft";
 
 export default function App() {
 
@@ -12,6 +13,7 @@ export default function App() {
     {
       ordos: {sum : 0, details : []},
       prime : {sum : 0, details : []},
+      lore : {sum : 0, details : []},
       total : 0
     }
   )
@@ -99,6 +101,31 @@ export default function App() {
     )
   })
 
+  // Iterates over the data from the API to gather and centralize the informations we need
+ // in an array.
+ const nftLoreArray = []
+ for (const [key, value] of Object.entries(userData.lore.details)) {
+  nftLoreArray.push(
+     {
+       nftId:key,
+       img:value.img,
+       reward:value.rewards
+     }
+     )
+ }
+
+ // We can .map over this array to create our NFT components.
+ const loreElements = nftLoreArray.map((nft) => {
+  return (
+    <LoreNft
+      key={nft.nftId}
+      id={nft.nftId}
+      img={nft.img}
+      reward={nft.reward}
+    />
+  )
+})
+
   function toggleModal() {
     if((document.getElementById('modal').style.getPropertyValue('display')) == "flex"){
       document.getElementById('modal').style.display = "none"
@@ -107,12 +134,12 @@ export default function App() {
     }
   }
 
-
-
   return (
     <>
       <BoxModal userData={userData} toggleModal={toggleModal} />
+
       <Header/>
+
       <Gravite 
         handleChange={handleChange}
         handlePaste={handlePaste}
@@ -121,15 +148,23 @@ export default function App() {
         handleFetch={fetchData}
         toggleModal={toggleModal}
       />
+      
       {/* displays collection component only is data is fetched and userData != empty. */}
+      {loreElements.length > 0 && <div className="lore-nfts">
+        <h2>Lore Collection</h2>
+        {loreElements}
+      </div>}
+
       {primeElements.length > 0 && <div className="prime-nfts"> 
         <h2>Prime Collection</h2>
         {primeElements}
       </div>}
+
       {ordosElements.length > 0 && <div className="ordo-nfts"> 
         <h2>Ordos Database Collection</h2>
         {ordosElements}
       </div>}
+
       <Footer />
       
     </>
