@@ -127,11 +127,10 @@ export default function App() {
  })
 
   function checkEligibility() {
-    let warningMsg
-    if(userKey && primeElements.length == 0 && ordosElements.length < 10){
-      warningMsg = `Missing 1x Prime or ${10 - ordosElements.length}x Ordos Database NFTs to access the program` 
+    if(userData){
+      const warningMsg = `Missing 1x Prime or ${10 - ordosElements.length}x Ordos Database NFTs to access the program` 
+      return warningMsg
     }
-    return warningMsg
   }
   
 

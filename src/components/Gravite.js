@@ -25,7 +25,7 @@ export default function Gravite (props) {
                 alt="modal opening"
             ></img>
 
-            <p className="eligibility-msg">{props.checkEligibility()}</p>
+            {props.userKey && primeNFT == 0 && ordosNFT < 10 && <p className="eligibility-msg">{props.checkEligibility()}</p>}
 
             <input 
                 className="user-input"
