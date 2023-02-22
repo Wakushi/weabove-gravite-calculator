@@ -124,7 +124,16 @@ export default function App() {
       reward={nft.reward}
     />
   )
-})
+ })
+
+  function checkEligibility() {
+    let warningMsg
+    if(userKey && primeElements.length == 0 && ordosElements.length < 10){
+      warningMsg = `Missing 1x Prime or ${10 - ordosElements.length}x Ordos Database NFTs to access the program` 
+    }
+    return warningMsg
+  }
+  
 
   function toggleModal() {
     if((document.getElementById('modal').style.getPropertyValue('display')) == "flex"){
@@ -143,6 +152,7 @@ export default function App() {
       <Gravite 
         handleChange={handleChange}
         handlePaste={handlePaste}
+        checkEligibility={checkEligibility}
         userData={userData}
         userKey={userKey}
         handleFetch={fetchData}

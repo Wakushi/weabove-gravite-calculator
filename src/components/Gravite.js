@@ -25,6 +25,8 @@ export default function Gravite (props) {
                 alt="modal opening"
             ></img>
 
+            <p className="eligibility-msg">{props.checkEligibility()}</p>
+
             <input 
                 className="user-input"
                 type="text"
