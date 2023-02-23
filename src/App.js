@@ -21,13 +21,29 @@ export default function App() {
 // User text input saved in state . Intends to hold the user public key and complete the fetch request.
   const [userKey, setUserKey] = React.useState("")
 
+// warningMsg holds the custom warning message regarding user eligibility to the staking program.  
+  const [warningMsg, setWarningMsg] = React.useState("")
+
 
 // fetchData : gets data from Hando's API and stores it to userData. 
    function fetchData() {
      fetch(`https://api.handosensei.com/weabove/estimate-staking/${userKey}`)
      .then(res => res.json())
-     .then(data => setUserData(data))
+     .then(data => {
+        setUserData(data)       
+     })
    }
+
+// Checks if the wallet is eligible to the LOYAL3 program (if 1x Prime or 10+ Ordos DTB are held)
+// If not it it creates a custom warning message displayed in the Gravite component (Gravite.js) 
+   React.useEffect(()=>{
+    const userPrimes = Object.keys(userData.prime.details).length
+    const userOrdos = Object.keys(userData.ordos.details).length
+    const missingOrdos = 10 - userOrdos
+    if(userKey && userPrimes == 0 && userOrdos < 10){
+      setWarningMsg(<p className="eligibility-msg">Missing 1x Prime or {missingOrdos}x Ordos Database NFTs to access the program</p>)
+    }   
+   },[userData])
 
 
 // Checks when the full user key has been entered to fetch data only when key is complete
@@ -126,13 +142,6 @@ export default function App() {
   )
  })
 
-  function checkEligibility() {
-    if(userData){
-      const warningMsg = `Missing 1x Prime or ${10 - ordosElements.length}x Ordos Database NFTs to access the program` 
-      return warningMsg
-    }
-  }
-  
 
   function toggleModal() {
     if((document.getElementById('modal').style.getPropertyValue('display')) == "flex"){
@@ -151,7 +160,7 @@ export default function App() {
       <Gravite 
         handleChange={handleChange}
         handlePaste={handlePaste}
-        checkEligibility={checkEligibility}
+        warningMsg={warningMsg}
         userData={userData}
         userKey={userKey}
         handleFetch={fetchData}
